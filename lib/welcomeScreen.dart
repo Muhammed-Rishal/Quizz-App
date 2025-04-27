@@ -1,6 +1,8 @@
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:quizz_app/home.dart';
+
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -36,13 +38,20 @@ class WelcomeScreen extends StatelessWidget {
             const SizedBox(height: 40), // Spacer
             ElevatedButton(
               onPressed: () {
-                // Add your button action here
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) => HomeScreen()),);
               },
-              child: const Text('Start',style: TextStyle(color: Colors.black),),
+              child: const Text('Start', style: TextStyle(color: Colors.blue,fontSize: 24,shadows: [Shadow(
+                color: Colors.grey,
+                offset: Offset(2, 0),
+                blurRadius: 0,
+              )])),
+
+
               style: ElevatedButton.styleFrom(
-                padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
-                textStyle: const TextStyle(fontSize: 24),
-                
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 40,
+                  vertical: 20,
+                ),
 
               ),
             ),

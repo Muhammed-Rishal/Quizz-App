@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:quizz_app/home.dart';
 import 'package:quizz_app/welcomeScreen.dart';
 
 void main(){
@@ -28,7 +27,9 @@ class MyApp extends StatelessWidget {
             centerTitle: true,
           color: Colors.blue,
 
-        )
+        ),
+
+
       ),
 
     );
